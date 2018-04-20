@@ -16,7 +16,7 @@ stty -F $1 115200 -brkint -icrnl -imaxbel -opost -isig -icanon -iexten -echo -ec
 
 logger "$0: starting : cat $1  | ./serial-usb/mylogger.sh  $1"
 
-cat $1 | ./serial-usb/mylogger.sh  $1
+cat $1 | ./serial-logger/mylogger.sh  $1
 
 
 logger "$0: exited for $1"
