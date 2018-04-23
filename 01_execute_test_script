@@ -4,13 +4,15 @@ set -e
 
 logger "$0 started..."
 
+
 cd $UM_MOUNTPOINT
 
+
 if [ -x airties-test.sh ]; then
-	logger "executing $UM_MOUNTPOINT/airties-test.sh"
+	logger "$0: executing $UM_MOUNTPOINT/airties-test.sh"
 	/bin/sh ./airties-test.sh & 
 else
-	logger "nothong to execute under $UM_MOINTPOINT"
+	logger "$0: nothing to execute under $UM_MOUNTPOINT"
 fi
 
 
